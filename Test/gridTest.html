@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;padding: 0;
+      box-sizing: border-box;
+    }
+    .Container{
+      display: grid;
+      /* grid-template-areas: 
+      "header header header"
+      "sidebar content content"s
+      "footer footer footser"; */
+      grid-template-columns: repeat(3,120px);
+      grid-template-rows: repeat(3,120px);
+      align-items: center;
+      justify-items: center;
+      align-content: center;
+      justify-content: center;
+      grid-auto-flow: column;
+      /* grid-row-start: 3; */
+      /* column-gap: 10px; */ 
+      /* row-gap: 10px; */
+      /* align-items:center; */
+      /* justify-items: center; */
+      /* justify-content: right; */
+      /* start | end | center | stretch; */
+      /* grid-template-rows: 200px 200px 200px; */
+      width: 600px;
+      height: 600px;
+      padding: 10px;
+      margin: 50px auto;
+      background: #dee2e6;
+    }
+    .Container div{
+      width: 6rem;
+      height: 6rem;
+      background: aqua;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 6rem;
+      color: white;
+    }
+    /* .header{
+      grid-area:header;
+    }
+    .sidebar{
+      grid-area:sidebar;
+    }
+    .content{
+      grid-area:content;
+    }
+    .footer{
+      grid-area:footer;
+    } */
+  </style>
+</head>
+<body>
+  <div class="Container">
+    <!-- <div class="header" style="background-color: #d9480f;">头部</div>
+    <div class="sidebar" style="background-color: #e67700;">侧边栏</div>
+    <div class="footer" style="background-color: #5c940d;">内容</div>
+    <div class="content" style="background-color: #1864ab;">底部</div> -->
+    <div style="background-color: #5f3dc4;">1</div>
+    <div style="background-color: #862e9c;">2</div>
+    <div style="background-color: #a61e4d;">3</div>
+    <div style="background-color: #c92a2a;">4</div>
+    <div style="background-color: #212529;">5</div>
+    <div style="background-color: #e18a3b;">6</div>
+    <div style="background-color: #7c461e;">7</div>
+    <div style="background-color: #354e6b;">8</div>
+    <div style="background-color: #12264f;">9</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 仓耳渔阳体;
+  src: url("./resource/font/仓耳渔阳体-W03.ttf");
+}
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "仓耳渔阳体";
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f6f7fb;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  margin-bottom: 30px;
+}
+.progress-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--line-border-empty);
+  z-index: -1;
+  transform: translateY(-50%);
+}
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: var(--line-border-fill);
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-out;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: white;
+  font-size: 14px;
+  color: #999;
+  border: 3px solid var(--line-border-empty);
+  border-radius: 50px;
+  transition: all 0.5s ease-in;
+}
+
+.btn {
+  padding: 8px 25px;
+  margin: 5px;
+  background-color: var(--line-border-fill);
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.btn:disabled {
+  background-color: var(--line-border-empty);
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}

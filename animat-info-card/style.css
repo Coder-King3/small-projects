@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 仓耳渔阳体;
+  src: url("./resource/font/仓耳渔阳体-W03.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "仓耳渔阳体";
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #928dab, #1f1c2c);
+  /* background-image: url('https://pic4.zhimg.com/80/v2-ce6b4b0420838dfd98178eb1840f52db_720w.webp'); */
+}
+/* 卡片盒子 */
+.card {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  /* height: 450px; */
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(127, 143, 166, 0.15);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.card:hover {
+  height: 450px;
+}
+
+/* 头像 */
+.card .avatar {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.35);
+  transition: 0.5s;
+}
+.card:hover .avatar {
+  width: 250px;
+  height: 250px;
+}
+
+.card .avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 内容 */
+.card .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(140px);
+}
+.card:hover .content .details {
+  transition: 0.5s;
+  transform: translateY(0px);
+}
+
+.card .content .title {
+  width: 100%;
+}
+.card .content .title h2 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.card .content .title h2 span {
+  font-size: 14px;
+  font-weight: 100;
+  color: #adb5bd;
+}
+
+.card .content .data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card .content .data h2 {
+  width: 80px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.card .content .data h2 span {
+  font-size: 12px;
+  font-weight: 100;
+  color: #adb5bd;
+}
+
+.card .content .btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card .content .btn button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  font-size: 16px;
+  transition: 0.3s;
+  color: #ffffff;
+}
+.card .content .btn button:hover {
+  background: #dbd2ff !important;
+  border: 1px solid #928dab;
+  color: #000000;
+}
+
+.card .content .btn button:first-child {
+  background: #928dab;
+  border: 1px solid #928dab;
+}
+
+.card .content .btn button:last-child {
+  border: 1px solid #928dab;
+}

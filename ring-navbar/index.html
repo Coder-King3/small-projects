@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./resource/img/LogoBlack.png"
+      type="image/x-icon"
+    />
+    <title>圆弧导航栏</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <ul>
+        <li class="list">
+          <a href="#">
+            <img class="icon" src="./resource/img/qq.png" alt="" />
+            <p class="text">QQ</p>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <img class="icon" src="./resource/img/wx.png" alt="" />
+            <p class="text">微信</p>
+          </a>
+        </li>
+        <li class="list active">
+          <a href="#">
+            <img class="icon" src="./resource/img/wyy.png" alt="" />
+            <p class="text">网易云</p>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <img class="icon" src="./resource/img/tb.png" alt="" />
+            <p class="text">淘宝</p>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <img class="icon" src="./resource/img/zfb.png" alt="" />
+            <p class="text">支付宝</p>
+          </a>
+        </li>
+        <li class="indicator"></li>
+      </ul>
+    </div>
+    <script>
+      let list = document.querySelectorAll(".list");
+      let indicator = document.getElementsByClassName("indicator")[0];
+      list.forEach((item, index) => {
+        // console.log(item,index)
+        item.addEventListener("click", function () {
+          list.forEach((jtem, j) => {
+            jtem.classList.remove("active");
+            this.classList.add("active");
+          });
+          indicator.style.transform = `translateX(${105 * index}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>

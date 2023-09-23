@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 仓耳渔阳体;
+  src: url("./resource/fonts/仓耳渔阳体-W03.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "仓耳渔阳体";
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.container .card {
+  position: relative;
+  flex: 0.5;
+  height: 80vh;
+  margin: 10px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.7s ease-out;
+}
+.container .card .details {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  opacity: 0;
+}
+
+.container .card .details .title {
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+.container .card .details .describe {
+  font-size: 14px;
+  color: #d9d9d9;
+}
+
+/* 点击后效果 */
+.card.active {
+  flex: 5;
+}
+.card.active .details {
+  animation: gradientdisplay 1s;
+  opacity: 1;
+}
+
+@keyframes gradientdisplay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
